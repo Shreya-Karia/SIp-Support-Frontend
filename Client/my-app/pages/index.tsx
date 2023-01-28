@@ -27,19 +27,19 @@ export default function Home() {
         <div className='align-left md:text-3xl text-xl font-bold text-white lg:mx-60 md:mx-20 mx-10 md:mt-20 mt-12 mb-0 '>CREATORS</div>
         <div className='flex md:gap-10 gap-6 lg:mx-60 md:mx-20 ml-10 mt-0 overflow-auto scrollbar-width-none'>
         <Card 
-        creator="John Doe" 
+        creator="Harry Styles" 
         description="s an Indian YouTuber, comedian, scriptwriter, Actor, performer and producer." 
         followers={1000} 
         image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxxe-wsaNQ49_z93ApsPfyKgD1GYBExdCubOOZGX2Q7pm0SNAyPeqIQQU20R4eiwrAmfw&usqp=CAU"
       />
       <Card 
-        creator="John Doe" 
+        creator="Harry Styles" 
         description="s an Indian YouTuber, comedian, scriptwriter, Actor, performer and producer." 
         followers={1000} 
         image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxxe-wsaNQ49_z93ApsPfyKgD1GYBExdCubOOZGX2Q7pm0SNAyPeqIQQU20R4eiwrAmfw&usqp=CAU"
       />
       <Card 
-        creator="John Doe" 
+        creator="Harry Styles" 
         description="s an Indian YouTuber, comedian, scriptwriter, Actor, performer and producer." 
         followers={1000} 
         image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxxe-wsaNQ49_z93ApsPfyKgD1GYBExdCubOOZGX2Q7pm0SNAyPeqIQQU20R4eiwrAmfw&usqp=CAU"
