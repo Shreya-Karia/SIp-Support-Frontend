@@ -7,10 +7,13 @@ import Navbar from '@/components/Navbar'
 import Background from '@/components/Background'
 import Banner from '@/components/Banner'
 import Card from '@/components/Card'
+import { useEffect } from 'react'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  
   return (
     <div className="overflow-hidden w-[100%] h-[100%] bg-primary font-Raleway">
       <Head>
