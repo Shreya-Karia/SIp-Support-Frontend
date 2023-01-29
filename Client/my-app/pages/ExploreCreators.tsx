@@ -19,8 +19,8 @@ export default function ExploreCreators() {
       <Background />
       <div className="flex flex-col md:space-y-10 space-y-5 justify-center">
         <Navbar />
-        <div className='flex flex-col md:space-y-20 space-y-5 items-center '>
-          <div className='z-20 lg:text-5xl md:text-4xl text-2xl bg-clip-text text-transparent bg-gradient-to-r from-[#635AD9] to-[#88F4FF] font-bold'>Be part of an Exclusive Community</div>
+        <div className='flex flex-col md:space-y-20 space-y-5 items-center text-center '>
+          <div className='z-20 lg:text-5xl md:text-4xl text-2xl bg-clip-text text-center text-transparent bg-gradient-to-r from-[#635AD9] to-[#88F4FF] font-bold'>Be part of an Exclusive Community</div>
         <div className='flex flex-row space-x-4 bg-secondary md:h-12 h-10 z-20 px-4 items-center rounded-lg'>
           <FontAwesomeIcon
               icon={faMagnifyingGlass}
