@@ -8,7 +8,7 @@ import google from "../public/google.svg";
 
 export default function Signup() {
   return (
-    <div className="overflow-hidden w-[100%] h-[100%] bg-primary font-Raleway">
+    <div className="overflow-hidden w-[100%] h-screen bg-primary font-Raleway">
       <Background />
       <div className="flex flex-col">
         <Navbar />
@@ -42,14 +42,14 @@ export default function Signup() {
                 id="firstname"
                 name="firstname"
                 placeholder="First Name"
-                className="outline-none bg-[#7338AC] border-none h-10 md:text-xl text-lg"
+                className="outline-none bg-[#7338AC] border-white rounded-lg md:p-8 p-6 border-2 h-10 md:text-xl text-lg"
               />
               <input
                 type="text"
                 id="lastname"
                 name="lastname"
                 placeholder="Last Name"
-                className="outline-none bg-[#7338AC] h-10 border-none md:text-xl text-lg
+                className="outline-none bg-[#7338AC] border-white rounded-lg md:p-8 p-6 border-2 h-10  md:text-xl text-lg
                   "
               />
               <input
@@ -57,7 +57,7 @@ export default function Signup() {
                 id="userid"
                 name="userid"
                 placeholder="User ID"
-                className="outline-none bg-[#7338AC] h-10 border-none md:text-xl text-lg
+                className="outline-none bg-[#7338AC] border-white rounded-lg md:p-8 p-6 border-2 h-10  md:text-xl text-lg
                   "
               />
               <input
@@ -65,14 +65,14 @@ export default function Signup() {
                 id="email"
                 name="email"
                 placeholder="Email"
-                className="outline-none bg-[#7338AC] border-none h-10 md:text-xl text-lg"
+                className="outline-none bg-[#7338AC] border-white rounded-lg md:p-8 p-6 border-2 h-10 md:text-xl text-lg"
               />
               <input
                 type="password"
                 id="password"
                 name="password"
                 placeholder="Password"
-                className="outline-none bg-[#7338AC] h-10 border-none md:text-xl text-lg
+                className="outline-none bg-[#7338AC] h-10 border-white rounded-lg md:p-8 p-6 border-2 md:text-xl text-lg
                   "
               />
               <div className="flex justify-center">
