@@ -1,42 +1,32 @@
-// // SPDX-License-Identifier: MIT
-// pragma solidity ^0.8.17;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
 
-// import "./NFT.sol";
+import "./NFT.sol";
 
-// contract NFTFactory {
+contract NFTFactory {
     
-//     NFT[] public deployedNFTs;
+    NFT[] public deployedNFTs;
 
-//     function createNewNFT() public {
-//         NFT newNFT = new NFT();
-//         deployedNFTs.push(newNFT);
-//     }
+    mapping(string => string) public creator;
 
-//     function getDeployedNFTs() public view returns (NFT[] memory) {
-//         return deployedNFTs;
-//     }
+    function createNewNFT() public {
+        NFT newNFT = new NFT(5,"",0x5B38Da6a701c568545dCfcB03FcB875f56beddC4);
+        creator[newNFT.name()] = "Matic";
+        deployedNFTs.push(newNFT);
+    }
 
-// }
+    function getDeployedNFTs() public view returns (NFT[] memory) {
+        return deployedNFTs;
+    }
 
-// // contract PinataNFT {
-// //     string public pinataUrl;
-// //     address public nftAddress;
+    function getCreator(string memory _name) public view returns (string memory) {
+        return creator[_name];
+    }
 
-// //     constructor(string memory _pinataUrl, address _nftAddress) {
-// //         pinataUrl = _pinataUrl;
-// //         nftAddress = _nftAddress;
-// //     }
-// // }
+    function getCreatorInfo(string memory _name) public view returns (string memory, string memory) {
+        return (_name, creator[_name]);
+    }
 
-// // contract PinataNFTFactory {
-// //     address[] public deployedPinataNFTs;
+    
 
-// //     function createPinataNFT(string memory _pinataUrl, address _nftAddress) public {
-// //         address newPinataNFT = address(new PinataNFT(_pinataUrl, _nftAddress));
-// //         deployedPinataNFTs.push(newPinataNFT);
-// //     }
-
-// //     function getDeployedPinataNFTs() public view returns (address[] memory) {
-// //         return deployedPinataNFTs;
-// //     }
-// // }
+}

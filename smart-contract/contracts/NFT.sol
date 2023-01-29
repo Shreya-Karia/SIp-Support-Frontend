@@ -37,17 +37,14 @@ contract NFT is ERC721URIStorage {
         bool sold
     );
 
-    constructor() ERC721("Support", "MATICC") {
-        totalSold = 0;
-    }
-
-    function batchMint(
+    constructor(
         uint256 n,
         string memory imageURL,
         address _address
-    ) public {
+    ) ERC721("Support", "MATICC") {
+        totalSold = 0;
         for (uint256 i = 0; i < n; i++) {
-            safeMint(_address,imageURL);
+            safeMint(_address, imageURL);
             sold[i] = false;
             idNFTItem[i] = NFTItem(
                 address(this),
@@ -60,6 +57,26 @@ contract NFT is ERC721URIStorage {
         }
         initialAddress = _address;
     }
+
+    // function batchMint(
+    //     uint256 n,
+    //     string memory imageURL,
+    //     address _address
+    // ) public {
+    //     for (uint256 i = 0; i < n; i++) {
+    //         safeMint(_address, imageURL);
+    //         sold[i] = false;
+    //         idNFTItem[i] = NFTItem(
+    //             address(this),
+    //             i,
+    //             _address,
+    //             _address,
+    //             0,
+    //             false
+    //         );
+    //     }
+    //     initialAddress = _address;
+    // }
 
     function transferFrom(address to, uint256 tokenId) public {
         require(!sold[tokenId]);
