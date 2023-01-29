@@ -8,7 +8,7 @@ import google from "../public/google.svg";
 
 export default function Signup() {
   return (
-    <div className="overflow-hidden w-[100%] h-screen bg-primary font-Raleway">
+    <div className="overflow-hidden w-[100%] h-[100%] bg-primary font-Raleway">
       <Background />
       <div className="flex flex-col">
         <Navbar />
