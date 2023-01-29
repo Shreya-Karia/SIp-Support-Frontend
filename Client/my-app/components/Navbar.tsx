@@ -7,12 +7,12 @@ function Navbar() {
     <>
       <div className="flex flex-row md:mx-20 mx-1 md:my-10 my-5 md:px-6 px-3  bg-secondary md:rounded-3xl rounded-lg md:h-16 h-12 items-center justify-between font-Raleway z-20">
         <div className="mx-2 md:my-auto my-2 flex flex-row md:space-x-8 space-x-4">
-          <div className="relative md:h-12 h-8 md:w-12 w-8">
+          <a className="relative md:h-12 h-8 md:w-12 w-8 cursor-pointer" href='/'>
             <Image src={logo} alt="logo" layout="fill" />
-          </div>
-          <div className="text-[#ffffff] m-auto md:text-xl text-sm hover:text-[#ffffff]">
+          </a>
+          <a className="text-[#ffffff] m-auto md:text-xl text-sm hover:text-[#ffffff] cursor-pointer " href='ExploreCreators'>
             Explore Creators
-          </div>
+          </a>
         </div>
         <div className="flex flex-grow"></div>
         <div className="mx-2 md:my-auto my-2 flex flex-row md:space-x-8 space-x-4">
