@@ -5,6 +5,7 @@ import Image from "next/image";
 import loginpht from "../public/Login.svg";
 import logo from "../public/logo.svg";
 import google from "../public/google.svg";
+import { LOGIN_URL } from '@/utils/constants/ApiConstants';
 
 export default function Login() {
   return (
@@ -44,8 +45,15 @@ export default function Login() {
               <div className="md:text-2xl text-lg">Sign up with Google</div>
             </button>
             <form
-              action="/send-data-here"
-              method="post"
+              // action="/send-data-here"
+              // method="post"
+              onSubmit={async (e)=> {
+                e.preventDefault();
+                console.log(LOGIN_URL);
+                
+                const data= await fetch(LOGIN_URL, {method:"POST",headers:{"Content-Type": "application/json",body:JSON.stringify({email:e.target.email.value, password:e.target.password.value})}});
+              console.log(data);
+              }}
               className="flex flex-col space-y-10 justify-center md:mx-10 mx-4"
             >
               <input

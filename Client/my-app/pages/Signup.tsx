@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Background from "@/components/Background";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
@@ -6,7 +6,26 @@ import loginpht from "../public/Login.svg";
 import logo from "../public/logo.svg";
 import google from "../public/google.svg";
 
+import { SIGNUP_URL } from "../utils/constants/ApiConstants";
+import axios from "axios";
+
 export default function Signup() {
+  
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    userId: "",
+    username: "",
+    password: "",
+  });
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    console.log(formData);
+    const hello = await axios.post(SIGNUP_URL, formData);
+    console.log(hello);
+  };
+
   return (
     <div className="overflow-hidden w-[100%] h-[100%] bg-primary font-Raleway">
       <Background />
@@ -33,8 +52,9 @@ export default function Signup() {
           </div>
           <div className="bg-[#7338AC] lg:w-1/2 w-full h-full z-20 flex flex-col lg:pt-10 pt-5 space-x-10 rounded-3xl">
             <form
-              action="/api/register"
-              method="post"
+            onSubmit={(e)=>{console.log(e);handleSubmit(e)}}
+              // action="/api/register/"
+              // method="post"
               className="flex flex-col space-y-10 lg:mx-20 mx-5 mt-6"
             >
               <input
@@ -43,22 +63,29 @@ export default function Signup() {
                 name="firstname"
                 placeholder="First Name"
                 className="outline-none bg-[#7338AC] border-white rounded-lg md:p-8 p-6 border-2 h-10 md:text-xl text-lg"
+                onChange={(e: any) => {
+                  return setFormData({ ...formData, firstName: e.target.value });
+                }}
               />
               <input
                 type="text"
                 id="lastname"
                 name="lastname"
                 placeholder="Last Name"
-                className="outline-none bg-[#7338AC] border-white rounded-lg md:p-8 p-6 border-2 h-10  md:text-xl text-lg
-                  "
+                className="outline-none bg-[#7338AC] border-white rounded-lg md:p-8 p-6 border-2 h-10  md:text-xl text-lg"
+                onChange={(e: any) => {
+                  return setFormData({ ...formData, lastName: e.target.value });
+                }}
               />
               <input
                 type="text"
                 id="userid"
                 name="userid"
                 placeholder="User ID"
-                className="outline-none bg-[#7338AC] border-white rounded-lg md:p-8 p-6 border-2 h-10  md:text-xl text-lg
-                  "
+                className="outline-none bg-[#7338AC] border-white rounded-lg md:p-8 p-6 border-2 h-10  md:text-xl text-lg"
+                onChange={(e: any) => {
+                  return setFormData({ ...formData, userId: e.target.value });
+                }}
               />
               <input
                 type="mail"
@@ -66,19 +93,25 @@ export default function Signup() {
                 name="email"
                 placeholder="Email"
                 className="outline-none bg-[#7338AC] border-white rounded-lg md:p-8 p-6 border-2 h-10 md:text-xl text-lg"
+                onChange={(e: any) => {
+                  return setFormData({ ...formData, username: e.target.value });
+                }}
               />
               <input
                 type="password"
                 id="password"
                 name="password"
                 placeholder="Password"
-                className="outline-none bg-[#7338AC] h-10 border-white rounded-lg md:p-8 p-6 border-2 md:text-xl text-lg
-                  "
+                className="outline-none bg-[#7338AC] h-10 border-white rounded-lg md:p-8 p-6 border-2 md:text-xl text-lg"
+                onChange={(e: any) => {
+                  return setFormData({ ...formData, password: e.target.value });
+                }}
               />
               <div className="flex justify-center">
                 <button
                   type="submit"
                   className="h-16 w-40 bg-[#fff] text-[#000] rounded-lg md:text-2xl text-lg lg:mx-20 mx-5"
+                  onClick={handleSubmit}
                 >
                   Sign Up
                 </button>
