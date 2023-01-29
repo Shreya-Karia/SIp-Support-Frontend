@@ -32,21 +32,21 @@ export default function Home() {
         <div className="flex md:gap-10 gap-6 lg:mx-60 md:mx-20 ml-10 mt-0 overflow-auto scrollbar-width-none">
           <Card
             creator="Harry Styles"
-            description="s an Indian YouTuber, comedian, scriptwriter, Actor, performer and producer."
-            followers={1000}
+            description="is a british singer, song-writer and actor."
+            followers={3}
             image="https://media.pitchfork.com/photos/604ea63a02674855a6d5bbbb/16:9/w_4432,h_2493,c_limit/Harry-Styles.jpg"
           />
           <Card
-            creator="Harry Styles"
-            description="s an Indian YouTuber, comedian, scriptwriter, Actor, performer and producer."
-            followers={1000}
-            image="https://media.pitchfork.com/photos/604ea63a02674855a6d5bbbb/16:9/w_4432,h_2493,c_limit/Harry-Styles.jpg"
+            creator="Rashmika Mandanna"
+            description="is an Indian actress who mostly works in Telugu cinema."
+            followers={4}
+            image="https://static.toiimg.com/photo/msid-95062045/95062045.jpg"
           />
           <Card
-            creator="Harry Styles"
-            description="s an Indian YouTuber, comedian, scriptwriter, Actor, performer and producer."
-            followers={1000}
-            image="https://media.pitchfork.com/photos/604ea63a02674855a6d5bbbb/16:9/w_4432,h_2493,c_limit/Harry-Styles.jpg"
+            creator="Taneesha Mirwani"
+            description="is an Indian content creator and social media influencer."
+            followers={2}
+            image="https://wp.missmalini.com/wp-content/uploads/2021/02/BeFunky-collage-16-11.jpg"
           />
         </div>
       </div>

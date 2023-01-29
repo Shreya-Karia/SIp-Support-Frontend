@@ -10,7 +10,7 @@ function Banner() {
           <input type='text' placeholder='yourname' className='text-left ml-0 outline-none border-none bg-[#252526]'>
           </input>
           </div>
-          <button className='md:w-1/2 w-full bg-tertiary text-white md:rounded-3xl rounded-xl p-2'>Build my community</button>
+          <button className='md:w-1/2 w-full bg-tertiary text-white md:rounded-3xl rounded-xl p-auto'>Build my community</button>
         </form>
         <div className='md:text-xl text-sm text-[#C9C9C9] font-bold'>It’s free!! Takes just a few minutes :)</div>
     </div>
