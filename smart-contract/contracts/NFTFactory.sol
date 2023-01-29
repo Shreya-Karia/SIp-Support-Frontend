@@ -1,17 +1,20 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-import "./NFT.sol";
+import "./CreatorNFT.sol";
 
 contract NFTFactory {
-    
     NFT[] public deployedNFTs;
 
-    mapping(string => string) public creator;
+    mapping(address => address[]) public creator;
 
-    function createNewNFT() public {
-        NFT newNFT = new NFT(5,"",0x5B38Da6a701c568545dCfcB03FcB875f56beddC4);
-        creator[newNFT.name()] = "Matic";
+    function createNewNFT(
+        uint256 n,
+        string memory imageURL,
+        address _address
+    ) public {
+        NFT newNFT = new NFT(n, imageURL, _address);
+        creator[_address].push(address(newNFT));
         deployedNFTs.push(newNFT);
     }
 
@@ -19,14 +22,8 @@ contract NFTFactory {
         return deployedNFTs;
     }
 
-    function getCreator(string memory _name) public view returns (string memory) {
-        return creator[_name];
+    function getCreatorInfo(address _address) public view returns (address[] memory) {
+        return creator[_address];
     }
-
-    function getCreatorInfo(string memory _name) public view returns (string memory, string memory) {
-        return (_name, creator[_name]);
-    }
-
-    
 
 }

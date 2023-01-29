@@ -28,7 +28,7 @@ contract NFT is ERC721URIStorage {
 
     mapping(uint256 => NFTItem) private idNFTItem;
 
-    event MarketItemCreated(
+    event NFTItemCreated(
         address indexed nftContract,
         uint256 indexed tokenId,
         address seller,
@@ -37,14 +37,12 @@ contract NFT is ERC721URIStorage {
         bool sold
     );
 
-    constructor(
-        uint256 n,
+    constructor(uint256 n,
         string memory imageURL,
-        address _address
-    ) ERC721("Support", "MATICC") {
+        address _address) ERC721("Support", "MATICC") {
         totalSold = 0;
         for (uint256 i = 0; i < n; i++) {
-            safeMint(_address, imageURL);
+            safeMint(_address,imageURL);
             sold[i] = false;
             idNFTItem[i] = NFTItem(
                 address(this),
@@ -58,25 +56,25 @@ contract NFT is ERC721URIStorage {
         initialAddress = _address;
     }
 
-    // function batchMint(
-    //     uint256 n,
-    //     string memory imageURL,
-    //     address _address
-    // ) public {
-    //     for (uint256 i = 0; i < n; i++) {
-    //         safeMint(_address, imageURL);
-    //         sold[i] = false;
-    //         idNFTItem[i] = NFTItem(
-    //             address(this),
-    //             i,
-    //             _address,
-    //             _address,
-    //             0,
-    //             false
-    //         );
-    //     }
-    //     initialAddress = _address;
-    // }
+    function batchMint(
+        uint256 n,
+        string memory imageURL,
+        address _address
+    ) public {
+        for (uint256 i = 0; i < n; i++) {
+            safeMint(_address,imageURL);
+            sold[i] = false;
+            idNFTItem[i] = NFTItem(
+                address(this),
+                i,
+                _address,
+                _address,
+                0,
+                false
+            );
+        }
+        initialAddress = _address;
+    }
 
     function transferFrom(address to, uint256 tokenId) public {
         require(!sold[tokenId]);
@@ -124,4 +122,7 @@ contract NFT is ERC721URIStorage {
 
         return items;
     }
+
+    // return address(this);
+
 }
