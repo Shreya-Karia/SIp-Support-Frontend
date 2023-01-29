@@ -12,8 +12,3 @@ export const POST_URL= BASE_URL+"/post/:userId"
 export const COMMENT_URL= BASE_URL+"/post/comment/:userId" 
 
 
-export async function getAuth() {
-    const res = await fetch(AUTH_URL);
-    const json = await res.json();
-    console.log(json);
-  }

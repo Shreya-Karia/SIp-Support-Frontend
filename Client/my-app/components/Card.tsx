@@ -11,7 +11,7 @@ type Props = {
 
 function Card({ creator, description, followers, image }: Props) {
   return (
-    <div className='flex flex-col space-y-3 md:mb-20  mb-10 z-20'>
+    <a className='flex flex-col space-y-3 md:mb-20  mb-10 z-20' href='/Creators/{creator}'>
       <div className='md:h-60 md:w-96 h-40 w-72'><img src={image} alt={creator} className='object-cover md:h-60 md:w-96 h-40 w-72' /></div>
       <div className='md:text-lg text-sm'><span className='md:text-2xl text-lg'>{creator}</span> {description}</div>
       <div className="flex space-x-2">
@@ -23,7 +23,7 @@ function Card({ creator, description, followers, image }: Props) {
       </button>
     </div>
 
-    </div>
+    </a>
   )
 }
 

@@ -33,24 +33,24 @@ export default function ExploreCreators() {
             ></input>
         </div>
         <div className='flex md:gap-10 gap-6 lg:mx-60 md:mx-20 ml-10 mt-0 overflow-auto scrollbar-width-none'>
-        <Card 
-        creator="Harry Styles" 
-        description="s an Indian YouTuber, comedian, scriptwriter, Actor, performer and producer." 
-        followers={1000} 
-        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxxe-wsaNQ49_z93ApsPfyKgD1GYBExdCubOOZGX2Q7pm0SNAyPeqIQQU20R4eiwrAmfw&usqp=CAU"
-      />
-      <Card 
-        creator="Harry Styles" 
-        description="s an Indian YouTuber, comedian, scriptwriter, Actor, performer and producer." 
-        followers={1000} 
-        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxxe-wsaNQ49_z93ApsPfyKgD1GYBExdCubOOZGX2Q7pm0SNAyPeqIQQU20R4eiwrAmfw&usqp=CAU"
-      />
-      <Card 
-        creator="Harry Styles" 
-        description="s an Indian YouTuber, comedian, scriptwriter, Actor, performer and producer." 
-        followers={1000} 
-        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxxe-wsaNQ49_z93ApsPfyKgD1GYBExdCubOOZGX2Q7pm0SNAyPeqIQQU20R4eiwrAmfw&usqp=CAU"
-      />
+        <Card
+            creator="Harry Styles"
+            description="s an Indian YouTuber, comedian, scriptwriter, Actor, performer and producer."
+            followers={1000}
+            image="https://media.pitchfork.com/photos/604ea63a02674855a6d5bbbb/16:9/w_4432,h_2493,c_limit/Harry-Styles.jpg"
+          />
+          <Card
+            creator="Harry Styles"
+            description="s an Indian YouTuber, comedian, scriptwriter, Actor, performer and producer."
+            followers={1000}
+            image="https://media.pitchfork.com/photos/604ea63a02674855a6d5bbbb/16:9/w_4432,h_2493,c_limit/Harry-Styles.jpg"
+          />
+          <Card
+            creator="Harry Styles"
+            description="s an Indian YouTuber, comedian, scriptwriter, Actor, performer and producer."
+            followers={1000}
+            image="https://media.pitchfork.com/photos/604ea63a02674855a6d5bbbb/16:9/w_4432,h_2493,c_limit/Harry-Styles.jpg"
+          />
         </div>
         </div>
         
