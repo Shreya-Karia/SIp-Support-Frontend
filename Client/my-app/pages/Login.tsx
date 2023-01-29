@@ -74,7 +74,7 @@ export default function Login() {
             </form>
             <div className="flex justify-center mb-0 md:mb-5 md:text-xl text-base lg:p-10 p-0 md:p-2">
               Don't have an account?
-              <a href="/Login" className="mx-3 text-[#88F4FF]">
+              <a href="/Signup" className="mx-3 text-[#88F4FF]">
                 Sign Up
               </a>
             </div>
