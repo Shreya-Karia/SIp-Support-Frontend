@@ -33,7 +33,7 @@ export default function Signup() {
           </div>
           <div className="bg-[#7338AC] lg:w-1/2 w-full h-full z-20 flex flex-col lg:pt-10 pt-5 space-x-10 rounded-3xl">
             <form
-              action="/send-data-here"
+              action="/api/register"
               method="post"
               className="flex flex-col space-y-10 lg:mx-20 mx-5 mt-6"
             >
